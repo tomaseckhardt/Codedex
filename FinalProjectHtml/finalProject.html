@@ -191,6 +191,7 @@
         input[type="submit"]:active {
             transform: scale(0.98);
         }
+        
     </style>
 </head>
 <body>
@@ -226,17 +227,24 @@
             <p>A classic pasta dish with marinara sauce and meatballs.</p>
             <p>Price: 12.99€</p>
         </article>
-        <article id="order-form">
+        <img 
+            src="https://thumbs.dreamstime.com/z/delicious-pizza-burger-pasta-salad-appetizers-lying-wooden-table-variety-takeaway-dishes-including-top-view-374796061.jpg" 
+            alt="Food Image" 
+            width="300" 
+            style="grid-column: 1 / -1; display: block; margin: 20px auto;"
+        >
+        <!-- IDK how to make the image smaller and centered, but AI solved it with "style" attribute. -->
             <h2>Place Your Order</h2>
+            <section id="order-form">
             <form action="/submit-order" method="post">
                 <label for="pizza-quantity">Pizza Quantity:</label>
-                <input type="number" id="pizza-quantity" name="pizza-quantity" min="0"><br><br>
+                <input type="number" id="pizza-quantity" name="pizza-quantity" min="0" required><br><br>
 
                 <label for="burger-quantity">Burger Quantity:</label>
-                <input type="number" id="burger-quantity" name="burger-quantity" min="0"><br><br>
+                <input type="number" id="burger-quantity" name="burger-quantity" min="0" required><br><br>
 
                 <label for="pasta-quantity">Pasta Quantity:</label>
-                <input type="number" id="pasta-quantity" name="pasta-quantity" min="0"><br><br>
+                <input type="number" id="pasta-quantity" name="pasta-quantity" min="0" required><br><br>
 
                 <label for="sides">Choose your sides:</label><br>
                 <input type="checkbox" id="fries" name="sides" value="fries">
@@ -252,4 +260,7 @@
         </article>
     </section>
 </body>
+<footer>
+    <p>Made with love by @EKIII</p>
+</footer>
 </html>
