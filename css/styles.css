@@ -32,22 +32,29 @@ section {
 /* ---------- header ---------- */
 
 header {
+  position: sticky;
+  top: 24px;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
-  background-color: #1b1b1f;
-  border-bottom: 1px solid #38383f;
+  max-width: 700px;
+  margin: 24px auto 0;
+  padding: 14px 20px;
+  background-color: #232328;
+  border: 1px solid #38383f;
+  border-radius: 10px;
 }
 
 .logo {
   font-family: monospace;
+  font-weight: bold;
   color: #f2c14e;
 }
 
 header nav {
   display: flex;
-  gap: 20px;
+  gap: 6px;
 }
 
 header nav a {
@@ -55,9 +62,13 @@ header nav a {
   font-size: 14px;
   text-decoration: none;
   color: #e9e6e1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 header nav a:hover {
+  background-color: #1b1b1f;
   color: #e0794f;
 }
 
